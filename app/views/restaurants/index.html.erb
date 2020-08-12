@@ -11,12 +11,12 @@
   <tbody>
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.category %></td>
-        <td><%= link_to 'Show', restaurant, class: "btn btn-primary text-decoration-none" %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-primary text-decoration-none" %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary text-decoration-none" %></td>
+        <td class="align-middle"><%= restaurant.name %></td>
+        <td class="align-middle"><%= restaurant.address %></td>
+        <td class="align-middle"><%= restaurant.category %></td>
+        <td class="align-middle"><%= link_to 'Show', restaurant, class: "btn btn-primary text-decoration-none" %></td>
+        <td class="align-middle"><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-secondary text-decoration-none" %></td>
+        <td class="align-middle"><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger text-decoration-none" %></td>
       </tr>
     <% end %>
   </tbody>

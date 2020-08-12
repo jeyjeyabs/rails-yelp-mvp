@@ -1,25 +1,27 @@
-<h1>Restaurant details</h1>
+<h1 class="my-5">Restaurant details</h1>
+<div class="list-group">
+  <p class="list-group-item">
+    <strong>Name:</strong>
+    <%= @restaurant.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+  <p class="list-group-item">
+    <strong>Address:</strong>
+    <%= @restaurant.address %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+  <p class="list-group-item">
+    <strong>Category:</strong>
+    <%= @restaurant.category %>
+  </p>
+</div>
 
-<p>
-  <strong>Category:</strong>
-  <%= @restaurant.category %>
-</p>
-
-<h2>Reviews</h2>
-<ul>
+<h2 class="my-5">Reviews</h2>
+<ul class="list-group">
 <% @restaurant.reviews.each do |review| %>
- <li><%= review.content %> - <%= review.rating %>⭐️</li>
+ <li class="list-group-item"><%= review.content %> - <%= review.rating %>⭐️</li>
 <% end %>
 </ul>
 
-<%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
+<%= link_to "Leave a review", new_restaurant_review_path(@restaurant), class: "btn btn-primary text-decoration-none mt-4" %>
+<%= link_to "Home", restaurants_path, class: "btn btn-primary text-decoration-none mt-4" %>
